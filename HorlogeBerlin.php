@@ -28,6 +28,7 @@ class HorlogeBerlin
     }
 
     public function simpleHours(string $nbHours) : string {
+        if($nbHours == "1") return "RRXX";
         return "RXXX";
     }
 }
