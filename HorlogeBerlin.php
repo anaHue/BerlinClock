@@ -28,10 +28,10 @@ class HorlogeBerlin
     }
 
     public function simpleHours(string $nbHours) : string {
-        if($nbHours == "4") return "RRRR";
-        if($nbHours == "3") return "RRRX";
-        if($nbHours == "2") return "RRXX";
-        if($nbHours == "1") return "RXXX";
+        if($nbHours % 5 == "4") return "RRRR";
+        if($nbHours % 5 == "3") return "RRRX";
+        if($nbHours % 5 == "2") return "RRXX";
+        if($nbHours % 5 == "1") return "RXXX";
         return "XXXX";
     }
 }
