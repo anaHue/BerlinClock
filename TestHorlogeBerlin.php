@@ -41,6 +41,13 @@ class TestHorlogeBerlin extends TestCase
         $this->assertEquals("YYYX", $actual);
     }
 
+    public function test_simpleMinutes_given4_shouldReturnYYYY(){
+
+        $actual = $this->actSimpleMinutes("4");
+
+        $this->assertEquals("YYYY", $actual);
+    }
+
     private function actSimpleMinutes(string $nbMinutes) : string {
         return $this->clock->simpleMinutes($nbMinutes);
     }
