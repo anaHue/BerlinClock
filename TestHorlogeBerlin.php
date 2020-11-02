@@ -161,6 +161,13 @@ class TestHorlogeBerlin extends TestCase
         $this->assertEquals("RRRX", $actual);
     }
 
+    public function test_simpleHours_given4_shouldReturnRRRR(){
+
+        $actual = $this->actSimpleHours("4");
+
+        $this->assertEquals("RRRR", $actual);
+    }
+
     private function actSimpleHours(string $nbHours) : string {
         return $this->clock->simpleHours($nbHours);
     }
