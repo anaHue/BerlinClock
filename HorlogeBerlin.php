@@ -26,4 +26,8 @@ class HorlogeBerlin
         if($nbMinutes >= "5") return "YXXXXXXXXXX";
         return "XXXXXXXXXXX";
     }
+
+    public function simpleHours(string $nbHours) : string {
+        return "RXXX";
+    }
 }
