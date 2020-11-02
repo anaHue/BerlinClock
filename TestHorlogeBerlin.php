@@ -5,18 +5,24 @@ use PHPUnit\Framework\TestCase;
 
 class TestHorlogeBerlin extends TestCase
 {
-    public function test_simpleMinutes_given0_shouldReturnXXXX(){
-        $clock = new HorlogeBerlin();
+    private $clock;
 
-        $actual = $clock->simpleMinutes(0);
+    protected function setUp(): void
+    {
+        parent::setUp();
+        $this->clock = new HorlogeBerlin();
+    }
+
+    public function test_simpleMinutes_given0_shouldReturnXXXX(){
+
+        $actual = $this->clock->simpleMinutes(0);
 
         $this->assertEquals("XXXX", $actual);
     }
 
     public function test_simpleMinutes_given1_shouldReturnYXXX(){
-        $clock = new HorlogeBerlin();
 
-        $actual = $clock->simpleMinutes(1);
+        $actual = $this->clock->simpleMinutes(1);
 
         $this->assertEquals("YXXX", $actual);
     }
