@@ -214,6 +214,13 @@ class TestHorlogeBerlin extends TestCase
         $this->assertEquals("RRRR", $actual);
     }
 
+    public function test_blockFiveHours_given23_shouldReturnRRRR(){
+
+        $actual = $this->actBlockFiveHours("23");
+
+        $this->assertEquals("RRRR", $actual);
+    }
+
     private function actBlockFiveHours(string $nbHours) : string {
         return $this->clock->blockFiveHours($nbHours);
     }
