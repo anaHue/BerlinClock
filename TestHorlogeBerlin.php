@@ -249,4 +249,10 @@ class TestHorlogeBerlin extends TestCase
         return $this->clock->seconds($nbSeconds);
     }
 
+    public function test_translateToBerlinClock_given17h21m36s_shouldReturnR__RRRX__RRXX__YYRYXXXXXXX__YXXX(){
+        $actual = $this->clock->translateToBerlinClockTime("17:21:36");
+
+        $this->assertEquals("R\nRRRX\nRRXX\nYYRYXXXXXXX\nYXXX",$actual);
+    }
+
 }
