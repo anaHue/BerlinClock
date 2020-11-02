@@ -5,4 +5,5 @@
 * Lors du premier switch, nous avons eu un souci de version de phpUnit.
 * Nous avons fait parfois des commit identiques car nous avions des petites erreurs de frappes.
 * Nous avons essayez de changer le rôle toutes les 5-15 minutes en fonction de ce qu'on avait eu le temps de coder et si il y avait eu un problème.
+* Pour les test de blockFiveMinutes à partir de 20 nous avons décidé de tout implémenter et de faire encore 1 test "random" pour vérifier notre implémentation + 60min.
 
