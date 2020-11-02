@@ -34,4 +34,8 @@ class HorlogeBerlin
         if($nbHours % 5 == "1") return "RXXX";
         return "XXXX";
     }
+
+    public function blockFiveHours(string $nbHours) : string{
+        return "XXXX";
+    }
 }

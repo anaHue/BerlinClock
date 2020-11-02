@@ -178,4 +178,11 @@ class TestHorlogeBerlin extends TestCase
     private function actSimpleHours(string $nbHours) : string {
         return $this->clock->simpleHours($nbHours);
     }
+
+    public function test_blockFiveHours_given0_shouldReturnXXXX(){
+
+        $actual = $this->clock->blockFiveHours(0);
+
+        $this->assertEquals("XXXX", $actual);
+    }
 }
