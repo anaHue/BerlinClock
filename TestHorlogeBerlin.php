@@ -236,6 +236,6 @@ class TestHorlogeBerlin extends TestCase
     }
 
     private function actSeconds(string $nbSeconds) : string {
-        return $this->clock->simpleHours($nbSeconds);
+        return $this->clock->seconds($nbSeconds);
     }
 }
