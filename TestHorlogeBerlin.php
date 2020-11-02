@@ -226,22 +226,30 @@ class TestHorlogeBerlin extends TestCase
     }
 
     public function test_seconds_given0_shouldReturnR(){
+
         $actual = $this->actSeconds("0");
+
         $this->assertEquals("R", $actual);
     }
 
     public function test_seconds_given1_shouldReturnX(){
+
         $actual = $this->actSeconds("1");
+
         $this->assertEquals("X", $actual);
     }
 
     public function test_seconds_given2_shouldReturnR(){
+
         $actual = $this->actSeconds("2");
+
         $this->assertEquals("R", $actual);
     }
 
     public function test_seconds_given3_shouldReturnX(){
+
         $actual = $this->actSeconds("3");
+
         $this->assertEquals("X", $actual);
     }
 
@@ -250,6 +258,7 @@ class TestHorlogeBerlin extends TestCase
     }
 
     public function test_translateToBerlinClock_given17h21m36s_shouldReturnR__RRRX__RRXX__YYRYXXXXXXX__YXXX(){
+
         $actual = $this->clock->translateToBerlinClockTime("17:21:36");
 
         $this->assertEquals("R\nRRRX\nRRXX\nYYRYXXXXXXX\nYXXX",$actual);
