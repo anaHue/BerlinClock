@@ -12,6 +12,14 @@ class HorlogeBerlin
     }
 
     public function blockFiveMinutes(string $nbMinutes) : string{
+        if($nbMinutes >= "60") return "XXXXXXXXXXX";
+        if($nbMinutes >= "55") return "YYRYYRYYRYY";
+        if($nbMinutes >= "50") return "YYRYYRYYRYX";
+        if($nbMinutes >= "45") return "YYRYYRYYRXX";
+        if($nbMinutes >= "40") return "YYRYYRYYXXX";
+        if($nbMinutes >= "35") return "YYRYYRYXXXX";
+        if($nbMinutes >= "30") return "YYRYYRXXXXX";
+        if($nbMinutes >= "25") return "YYRYYXXXXXX";
         if($nbMinutes >= "20") return "YYRYXXXXXXX";
         if($nbMinutes >= "15") return "YYRXXXXXXXX";
         if($nbMinutes >= "10") return "YYXXXXXXXXX";
