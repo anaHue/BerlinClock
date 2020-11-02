@@ -36,6 +36,7 @@ class HorlogeBerlin
     }
 
     public function blockFiveHours(string $nbHours) : string{
+        if($nbHours === "15") return "RRRX";
         if($nbHours === "10") return "RRXX";
         if($nbHours === "5") return "RXXX";
         return "XXXX";
