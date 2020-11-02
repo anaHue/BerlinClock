@@ -44,6 +44,7 @@ class HorlogeBerlin
     }
 
     public function seconds(string $nbSeconds) : string{
+        if($nbSeconds === "3") return "X";
         if($nbSeconds === "2") return "R";
         if($nbSeconds === "1") return "X";
         return "R";
