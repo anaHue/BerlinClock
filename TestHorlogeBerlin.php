@@ -12,4 +12,12 @@ class TestHorlogeBerlin extends TestCase
 
         $this->assertEquals("XXXX", $actual);
     }
+
+    public function test_simpleMinutes_given1_shouldReturnYXXX(){
+        $clock = new HorlogeBerlin();
+
+        $actual = $clock->simpleMinutes(1);
+
+        $this->assertEquals("YXXX", $actual);
+    }
 }
