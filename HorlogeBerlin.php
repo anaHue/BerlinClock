@@ -10,4 +10,8 @@ class HorlogeBerlin
         if($nbMinutes%5 == "4") return "YYYY";
         return "XXXX";
     }
+
+    public function blockFiveMinutes(string $nbMinutes) : string{
+        return "XXXXXXXXXXX";
+    }
 }
