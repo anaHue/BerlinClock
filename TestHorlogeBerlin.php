@@ -72,4 +72,11 @@ class TestHorlogeBerlin extends TestCase
 
         $this->assertEquals("XXXXXXXXXXX", $actual);
     }
+
+    public function test_blockFiveMinutes_given1_shouldReturnXXXXXXXXXXX(){
+
+        $actual = $this->clock->blockFiveMinutes("1");
+
+        $this->assertEquals("XXXXXXXXXXX", $actual);
+    }
 }
