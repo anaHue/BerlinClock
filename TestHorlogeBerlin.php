@@ -137,15 +137,16 @@ class TestHorlogeBerlin extends TestCase
 
         $actual = $this->actSimpleHours("0");
 
-        $this->assertEquals("RXXX", $actual);
+        $this->assertEquals("XXXX", $actual);
     }
 
     public function test_simpleHours_given1_shouldReturnRRXX(){
 
         $actual = $this->actSimpleHours("1");
 
-        $this->assertEquals("RRXX", $actual);
+        $this->assertEquals("RXXX", $actual);
     }
+
 
     private function actSimpleHours(string $nbHours) : string {
         return $this->clock->simpleHours($nbHours);
