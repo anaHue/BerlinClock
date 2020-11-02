@@ -235,7 +235,14 @@ class TestHorlogeBerlin extends TestCase
         $this->assertEquals("X", $actual);
     }
 
+    public function test_seconds_given2_shouldReturnR(){
+        $actual = $this->actSeconds("2");
+        $this->assertEquals("R", $actual);
+    }
+
+
     private function actSeconds(string $nbSeconds) : string {
         return $this->clock->seconds($nbSeconds);
     }
+
 }
