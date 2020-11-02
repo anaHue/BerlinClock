@@ -226,12 +226,16 @@ class TestHorlogeBerlin extends TestCase
     }
 
     public function test_seconds_given0_shouldReturnR(){
-        $actual = $this->clock->seconds("0");
+        $actual = $this->actSeconds("0");
         $this->assertEquals("R", $actual);
     }
 
     public function test_seconds_given1_shouldReturnX(){
-        $actual = $this->clock->seconds("1");
+        $actual = $this->actSeconds("1");
         $this->assertEquals("X", $actual);
+    }
+
+    private function actSeconds(string $nbSeconds) : string {
+        return $this->clock->simpleHours($nbSeconds);
     }
 }
